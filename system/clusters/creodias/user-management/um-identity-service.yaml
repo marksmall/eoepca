@@ -24,14 +24,14 @@ spec:
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt
         hosts:
-          - host: identity.keycloak.develop.eoepca.org
+          - host: identity.keycloak.192.168.58.2.nip.io
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - secretName: identity-keycloak-tls-certificate
             hosts:
-              - identity.keycloak.develop.eoepca.org
+              - identity.keycloak.192.168.58.2.nip.io
     identity-postgres:
       volumeClaim:
         name: eoepca-userman-pvc
@@ -40,39 +40,39 @@ spec:
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt
         hosts:
-          - host: identity.api.develop.eoepca.org
+          - host: identity.api.192.168.58.2.nip.io
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - secretName: identity-api-tls-certificate
             hosts:
-              - identity.api.develop.eoepca.org
+              - identity.api.192.168.58.2.nip.io
     identity-manager:
       ingress:
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt
         hosts:
-          - host: identity.manager.develop.eoepca.org
+          - host: identity.manager.192.168.58.2.nip.io
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - secretName: identity-manager-tls-certificate
             hosts:
-              - identity.manager.develop.eoepca.org
+              - identity.manager.192.168.58.2.nip.io
     identity-proxy:
       ingress:
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt
         hosts:
-          - host: identity.proxy.develop.eoepca.org
+          - host: identity.proxy.192.168.58.2.nip.io
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - secretName: identity-proxy-tls-certificate
             hosts:
-              - identity.proxy.develop.eoepca.org
+              - identity.proxy.192.168.58.2.nip.io
   timeout: 5m0s
   interval: 1m0s

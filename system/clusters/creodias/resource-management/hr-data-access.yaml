@@ -39,10 +39,10 @@ spec:
           nginx.ingress.kubernetes.io/enable-cors: "true"
           cert-manager.io/cluster-issuer: letsencrypt
         hosts:
-          - host: data-access.develop.eoepca.org
+          - host: data-access.192.168.58.2.nip.io
         tls:
           - hosts:
-              - data-access.develop.eoepca.org
+              - data-access.192.168.58.2.nip.io
             secretName: data-access-tls
 
       storage:
@@ -807,7 +807,7 @@ spec:
             - path: registrar_pycsw.backend.ItemBackend
               kwargs:
                 repository_database_uri: postgresql://postgres:mypass@resource-catalogue-db/pycsw
-                ows_url: https://data-access.develop.eoepca.org/ows
+                ows_url: https://data-access.192.168.58.2.nip.io/ows
           defaultSuccessQueue: seed_queue
           routes:
             collections:

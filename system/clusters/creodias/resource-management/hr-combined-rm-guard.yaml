@@ -19,8 +19,8 @@ spec:
     #---------------------------------------------------------------------------
     global:
       context: combined-rm
-      domain: develop.eoepca.org
-      nginxIp: 185.52.192.231
+      domain: 192.168.58.2.nip.io
+      nginxIp: 192.168.58.2
       certManager:
         clusterIssuer: letsencrypt
     #---------------------------------------------------------------------------
@@ -89,7 +89,7 @@ spec:
         credentialsSecretName: "rm-uma-user-agent"
       logging:
         level: "info"
-      unauthorizedResponse: 'Bearer realm="https://portal.develop.eoepca.org/oidc/authenticate/"'
+      unauthorizedResponse: 'Bearer realm="https://portal.192.168.58.2.nip.io/oidc/authenticate/"'
       openAccess: true
     #---------------------------------------------------------------------------
     # END values

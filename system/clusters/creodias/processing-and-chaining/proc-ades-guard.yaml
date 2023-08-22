@@ -19,8 +19,8 @@ spec:
     #---------------------------------------------------------------------------
     global:
       context: ades
-      domain: develop.eoepca.org
-      nginxIp: 185.52.192.231
+      domain: 192.168.58.2.nip.io
+      nginxIp: 192.168.58.2
       certManager:
         clusterIssuer: letsencrypt
     #---------------------------------------------------------------------------
@@ -78,7 +78,7 @@ spec:
         credentialsSecretName: "proc-uma-user-agent"
       logging:
         level: "info"
-      unauthorizedResponse: 'Bearer realm="https://auth.develop.eoepca.org/oxauth/auth/passport/passportlogin.htm"'
+      unauthorizedResponse: 'Bearer realm="https://auth.192.168.58.2.nip.io/oxauth/auth/passport/passportlogin.htm"'
       openAccess: false
     #---------------------------------------------------------------------------
     # END values

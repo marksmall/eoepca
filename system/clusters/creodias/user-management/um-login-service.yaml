@@ -17,7 +17,7 @@ spec:
       name: eoepca-userman-pvc
       create: false
     config:
-      domain: auth.develop.eoepca.org
+      domain: auth.192.168.58.2.nip.io
       volumeClaim:
         name: eoepca-userman-pvc
     opendj:
@@ -51,18 +51,18 @@ spec:
           cpu: 100m
           memory: 100Mi
     global:
-      domain: auth.develop.eoepca.org
-      nginxIp: 185.52.192.231
+      domain: auth.192.168.58.2.nip.io
+      nginxIp: 192.168.58.2
       namespace: um
     nginx:
       ingress:
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt
         hosts:
-          - auth.develop.eoepca.org
+          - auth.192.168.58.2.nip.io
         tls:
           - hosts:
-              - auth.develop.eoepca.org
+              - auth.192.168.58.2.nip.io
             secretName: gluu-tls-certificate
   timeout: 25m0s
   interval: 1m0s

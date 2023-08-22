@@ -19,8 +19,8 @@ spec:
     #---------------------------------------------------------------------------
     global:
       context: dummy-service
-      domain: develop.eoepca.org
-      nginxIp: 185.52.192.231
+      domain: 192.168.58.2.nip.io
+      nginxIp: 192.168.58.2
       certManager:
         clusterIssuer: letsencrypt
     #---------------------------------------------------------------------------
@@ -72,7 +72,7 @@ spec:
       logging:
         level: "debug"
       # openAccess: true
-      unauthorizedResponse: 'Bearer realm="https://portal.develop.eoepca.org/oidc/authenticate/"'
+      unauthorizedResponse: 'Bearer realm="https://portal.192.168.58.2.nip.io/oidc/authenticate/"'
     #---------------------------------------------------------------------------
     # END values
     #---------------------------------------------------------------------------

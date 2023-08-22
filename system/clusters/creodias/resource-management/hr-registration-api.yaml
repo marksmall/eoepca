@@ -24,11 +24,11 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: registration-api-open.develop.eoepca.org
+        - host: registration-api-open.192.168.58.2.nip.io
           paths: ["/"]
       tls:
         - hosts:
-            - registration-api-open.develop.eoepca.org
+            - registration-api-open.192.168.58.2.nip.io
           secretName: registration-api-tls
 
     # some values for the workspace API

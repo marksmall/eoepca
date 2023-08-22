@@ -15,6 +15,6 @@ spec:
         namespace: common
   values:
     fullnameOverride: minio-bucket-api
-    minIOServerEndpoint: https://minio.develop.eoepca.org
+    minIOServerEndpoint: https://minio.192.168.58.2.nip.io
     accessCredentials:
       secretName: rm-minio-root-credentials

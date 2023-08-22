@@ -17,14 +17,14 @@ spec:
       enabled: true
       annotations: {}
       hosts:
-        - host: applicationhub.develop.eoepca.org
+        - host: applicationhub.192.168.58.2.nip.io
           paths:
             - path: /
               pathType: ImplementationSpecific
       tls:
         - secretName: applicationhub-tls
           hosts:
-          - applicationhub.develop.eoepca.org
+          - applicationhub.192.168.58.2.nip.io
 
     jupyterhub:
       ingress:
@@ -35,11 +35,11 @@ spec:
         extraEnv: 
             JUPYTERHUB_ENV: "dev"
             JUPYTERHUB_SINGLE_USER_IMAGE: "eoepca/pde-container:1.0.3"
-            OAUTH_CALLBACK_URL: https://applicationhub.develop.eoepca.org/hub/oauth_callback
-            OAUTH2_USERDATA_URL: https://auth.develop.eoepca.org/oxauth/restv1/userinfo
-            OAUTH2_TOKEN_URL: https://auth.develop.eoepca.org/oxauth/restv1/token
-            OAUTH2_AUTHORIZE_URL: https://auth.develop.eoepca.org/oxauth/restv1/authorize
-            OAUTH_LOGOUT_REDIRECT_URL: "https://applicationhub.develop.eoepca.org"
+            OAUTH_CALLBACK_URL: https://applicationhub.192.168.58.2.nip.io/hub/oauth_callback
+            OAUTH2_USERDATA_URL: https://auth.192.168.58.2.nip.io/oxauth/restv1/userinfo
+            OAUTH2_TOKEN_URL: https://auth.192.168.58.2.nip.io/oxauth/restv1/token
+            OAUTH2_AUTHORIZE_URL: https://auth.192.168.58.2.nip.io/oxauth/restv1/authorize
+            OAUTH_LOGOUT_REDIRECT_URL: "https://applicationhub.192.168.58.2.nip.io"
             OAUTH2_USERNAME_KEY: "user_name"
             STORAGE_CLASS: "managed-nfs-storage"
             RESOURCE_MANAGER_WORKSPACE_PREFIX: "develop-user"

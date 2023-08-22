@@ -11,10 +11,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - notification-controller.develop.eoepca.org
+        - notification-controller.192.168.58.2.nip.io
       secretName: notification-controller-tls
   rules:
-  - host: notification-controller.develop.eoepca.org
+  - host: notification-controller.192.168.58.2.nip.io
     http:
       paths:
       - path: /
