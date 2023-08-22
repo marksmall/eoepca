@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: develop
+    branch: mytest
   secretRef:
     name: flux-system
   url: ssh://git@github.com/marksmall/eoepca
